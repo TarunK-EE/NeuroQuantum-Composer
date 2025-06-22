@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroQuantum Composer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>NeuroQuantum Composer</h1>
+            <div class="controls">
+                <button id="startBtn">Start</button>
+                <button id="stopBtn">Stop</button>
+            </div>
+        </header>
+        
+        <div id="visualizer-container">
+            <!-- Three.js visualization will render here -->
+        </div>
+        
+        <div id="debug-panel">
+            <div class="debug-section">
+                <h3>Input Meters</h3>
+                <div class="meter">
+                    <label>Alpha Waves:</label>
+                    <div id="alpha-meter" class="meter-bar"><div class="meter-value"></div></div>
+                    <span id="alpha-value">0.0</span>
+                </div>
+                <div class="meter">
+                    <label>Beta Waves:</label>
+                    <div id="beta-meter" class="meter-bar"><div class="meter-value"></div></div>
+                    <span id="beta-value">0.0</span>
+                </div>
+            </div>
+            <div class="debug-section">
+                <h3>Quantum State</h3>
+                <pre id="quantum-state">Awaiting initialization...</pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/music@1.23.1/dist/magentamusic.min.js"></script>
+      <!-- Application Code -->
+    <script src="js/inputSystem.js"></script>
+    <script src="js/quantumLayer.js"></script>
+    <script src="js/aiMusicEngine.js"></script>
+    <script src="js/audioSystem.js"></script>
+    <script src="js/catchyMusicGenerator.js"></script>
+    <script src="js/visualizer.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
